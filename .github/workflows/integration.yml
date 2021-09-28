@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
       - run: |
-          runningNodeVersion=$(node -v)
+          runningNodeVersion=$(node -v | sed 's/v//g')
           requiredNodeVersion=$(cat ".nvmrc")
 
           if [ "$runningNodeVersion" != "$requiredNodeVersion" ]; then
