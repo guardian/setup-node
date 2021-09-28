@@ -1,0 +1,25 @@
+name: CI
+on: # rebuild any PRs and main branch changes
+  pull_request:
+  push:
+    branches:
+      - main
+      - 'releases/*'
+
+jobs:
+  integration-test: # make sure the action works on a clean machine without building
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+      - run: |
+          runningNodeVersion=$(node -v | sed 's/v//g')
+          requiredNodeVersion=$(cat ".nvmrc")
+
+          if [ "$runningNodeVersion" != "$requiredNodeVersion" ]; then
+            echo -e "Using wrong version of Node. Required ${requiredNodeVersion}. Running ${runningNodeVersion}."
+            exit 1
+          fi
+          
