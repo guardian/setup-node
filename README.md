@@ -11,7 +11,7 @@ This is a fork of the official GitHub [actions/setup-node](https://github.com/ma
 
 ```yaml
 - name: Setup node
-  uses: guardian/actions-setup-node@main
+  uses: guardian/actions-setup-node@v2.4.1
 ```
 
 It checks the following places:
