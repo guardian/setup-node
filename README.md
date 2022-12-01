@@ -1,3 +1,25 @@
+# Archived fork of setup-node
+This project is now retired. You can use the official Github [actions/setup-node](https://github.com/marketplace/actions/setup-node-js-environment) which now has some support for node version files:
+
+There is a new optional input: `node-version-file`, that accepts path (relative to repository root) to file containing Node.js version (for example `.nvmrc`).
+
+The action will search for the Node.js version file and read the Node.js version if the file exists. If both inputs `node-version` and `node-version-file` are specified, the action will throw a warning and the `node-version` input will be used.
+ 
+#### Example of yml
+ ```yaml
+ steps:
+ - uses: actions/checkout@v2
+ - uses: actions/setup-node@v2
+   with:
+     node-version-file: '.nvmrc'
+ - run: npm install
+ - run: npm test
+ ```
+
+
+<details>
+<summary>Click here to view the old readme</summary>
+
 # setup-node
 
 <p align="left">
@@ -144,3 +166,4 @@ Contributions are welcome!  See [Contributor's Guide](docs/contributors.md)
 ## Code of Conduct
 
 :wave: Be nice.  See [our code of conduct](CONDUCT)
+<details>
