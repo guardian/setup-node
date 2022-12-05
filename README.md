@@ -1,26 +1,12 @@
-# Archived fork of setup-node
-This project is now retired. You can use the official Github [actions/setup-node](https://github.com/marketplace/actions/setup-node-js-environment) which now has some support for node version files:
-
-There is a new optional input: `node-version-file`, that accepts path (relative to repository root) to file containing Node.js version (for example `.nvmrc`).
-
-The action will search for the Node.js version file and read the Node.js version if the file exists. If both inputs `node-version` and `node-version-file` are specified, the action will throw a warning and the `node-version` input will be used.
- 
-#### Example of yml
- ```yaml
- steps:
- - uses: actions/checkout@v2
- - uses: actions/setup-node@v2
-   with:
-     node-version-file: '.nvmrc'
- - run: npm install
- - run: npm test
- ```
-
-
-<details>
-<summary>Click here to view the old readme</summary>
-
 # setup-node
+
+_This fork is archived and will not be updated._
+
+_The official Github [actions/setup-node](https://github.com/marketplace/actions/setup-node-js-environment) now has [some support for node version files](https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#node-version-file)._
+
+_You should use that instead._
+
+---
 
 <p align="left">
   <a href="https://github.com/actions/setup-node/actions?query=workflow%3Abuild-test"><img alt="build-test status" src="https://github.com/actions/setup-node/workflows/build-test/badge.svg"></a> <a href="https://github.com/actions/setup-node/actions?query=workflow%3Aversions"><img alt="versions status" src="https://github.com/actions/setup-node/workflows/versions/badge.svg"></a> <a href="https://github.com/actions/setup-node/actions?query=workflow%3Aproxy"><img alt="proxy status" src="https://github.com/actions/setup-node/workflows/proxy/badge.svg"></a> 
