@@ -1,5 +1,13 @@
 # setup-node
 
+_This fork is archived and will not be updated._
+
+_The official Github [actions/setup-node](https://github.com/marketplace/actions/setup-node-js-environment) now has [some support for node version files](https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#node-version-file)._
+
+_You should use that instead._
+
+---
+
 <p align="left">
   <a href="https://github.com/actions/setup-node/actions?query=workflow%3Abuild-test"><img alt="build-test status" src="https://github.com/actions/setup-node/workflows/build-test/badge.svg"></a> <a href="https://github.com/actions/setup-node/actions?query=workflow%3Aversions"><img alt="versions status" src="https://github.com/actions/setup-node/workflows/versions/badge.svg"></a> <a href="https://github.com/actions/setup-node/actions?query=workflow%3Aproxy"><img alt="proxy status" src="https://github.com/actions/setup-node/workflows/proxy/badge.svg"></a> 
 </p>
